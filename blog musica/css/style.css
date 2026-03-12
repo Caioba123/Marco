@@ -1,0 +1,17 @@
+.banner {
+  background-image: url("img/Blog do FutParodias.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.banner h1{
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
