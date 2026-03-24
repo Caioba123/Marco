@@ -1,0 +1,112 @@
+<h1>Lista de Dados</h1>
+<div class="teste_containers">
+    <style>
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e fundo */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #222;
+}
+
+/* Container principal */
+.teste_containers {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Botão adicionar */
+.teste_containers a {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 16px;
+    background: #4f46e5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.teste_containers a:hover {
+    background: #4338ca;
+}
+
+/* Lista de itens */
+.teste_containers div {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+/* Hover nos itens */
+.teste_containers div:hover {
+    background: #eef2ff;
+    transform: translateY(-2px);
+}
+
+/* Texto em destaque */
+.bold {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .teste_containers {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .teste_containers div {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    .teste_containers a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .teste_containers div {
+        padding: 10px;
+    }
+}
+</style>
+    <a href="/">Adicionar</a>
+    {{#each teste}}
+        <div>#{{this.id}}- <span class="bold">{{this.nome}} {{this.email}} {{this.senha}} {{this.cpf}} {{this.numero}}</span></div>
+    {{/each}}
+</div>
